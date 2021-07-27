@@ -1,0 +1,35 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+h1{
+  font-size: 20px !important;
+}
+.flex-container{
+  display: flex !important;
+}
+.btn{
+  background-color: red !important;
+  color: white !important;
+}
+select{
+  box-shadow: none !important;
+  border-color: black !important;
+
+}
+.flex-cont-ele{
+  display: flex !important;
+  flex-direction: column;
+  justify-content:space-around;
+  text-align: center;
+}
+.fa-plus{
+  color:green;
+  margin:5px
+}
+.fa-minus{
+  color:red !important;
+  margin:5px
+}
+.fa-trash{
+  color:red;
+  margin:5px
+}

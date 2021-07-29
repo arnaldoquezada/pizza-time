@@ -5,6 +5,7 @@ h1{
 }
 .flex-container{
   display: flex !important;
+  margin-left: 15px;
 }
 .btn{
   background-color: red !important;
@@ -32,4 +33,7 @@ select{
 .fa-trash{
   color:red;
   margin:5px
+}
+.contenedor{
+  width: 100px;
 }

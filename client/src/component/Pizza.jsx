@@ -34,7 +34,7 @@ export default function Pizza({ pizza }) {
         <div style={{ margin: '70px' }} className="shadow-lg p-3 bg-body rounded">
             <div onClick={handleShow} className="flex-cont-ele">
                 <h1>{pizza.name}</h1>
-                <img src={pizza.image} alt="" className="img-fluid" style={{ height: '200px !important', width: '200px' }} />
+                <img src={pizza.image} alt="" className="img-fluid img-center" style={{ height: '200px !important', width: '200px' }} />
             </div>
             <div className="flex-container">
                 <div className='m-1 w-100'>

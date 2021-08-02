@@ -19,7 +19,7 @@ select{
 .flex-cont-ele{
   display: flex !important;
   flex-direction: column;
-  justify-content:space-around;
+  align-content: center;
   text-align: center;
 }
 .fa-plus{
@@ -34,6 +34,34 @@ select{
   color:red;
   margin:5px
 }
+.fa-cart{
+  color:#f91101;
+  margin-top:0px ;
+}
 .contenedor{
   width: 100px;
+}
+.imgLogo{
+  width: 80px;
+  height: 80px;
+}
+.logoName{
+  font-family: 'Style Script', cursive;  
+  font-size: 35px;
+  text-decoration: none;
+  color: #f91101;
+  font-weight: bold;
+}
+.totalFont{
+  display: flex;
+  margin-left: 500px;  
+  font-size: 35px;
+}
+.flex-cont-carro{
+  display: flex !important;
+  margin-left: 75px;
+}
+.img-center{
+  display: flex;
+  align-content: center;
 }

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { CartContext } from '../contexts/CartContext'
+import swal from 'sweetalert';
 
 export default function CartScreen() {
 
@@ -28,12 +29,11 @@ export default function CartScreen() {
         console.log("Items en carro:", cart.items[idx])
         const newItemsCart = cart.items.map((it, i) => {
             if (idx === i) {
-                if (val >= 11) {
-                    alert("No puede tener mas de 10 pizzas")
+                if (val > 10) {
+                    swal("Importante!", "Solo puedes agregar máximo 10 pizzas", "info");
                 } else {
-                    if (val <=0) {
-                        console.log("Llego Aqui")
-                        eliminarPizza()
+                    if (val <1) {
+                        swal("Error!", "Debes agregar al menos 1 pizza", "error");
                     } else {
                         it = { ...it, cant: val };
                     }
@@ -53,15 +53,15 @@ export default function CartScreen() {
 
         <div>
             <div className="row" justify-content center container>
-                <div className="col-md-6">
-                    <h2 style={{ fontSize: '40px' }}>Mi Carro</h2><h3>{cart.total}</h3>
+                <div className="col-md-5">
+                    <h2 className="totalFont">TOTAL: ${cart.total}</h2>
                     {cart.items.length > 0 ?
                         cart.items.map((item, idx) => {
                             return (
-                                <div key={idx} className="flex-container">
+                                <div key={idx} className="flex-cont-carro">
                                     <div className="text-left m-1 w-100">
                                         <h1>{item.name} - "{item.varie}"</h1>
-                                        <h1>Precio : {item.cant * item.price}</h1>
+                                        <h1>SubTotal: {item.cant * item.price}</h1>
                                         <h1>Cantidad :
                                             <i className="fa fa-plus" aria-hidden="true"
                                                 onClick={() => {
@@ -80,15 +80,16 @@ export default function CartScreen() {
                                         <img src={item.image} alt="" style={{ width: '80px', height: '80px' }} />
                                     </div>
                                     <div className="m-1 w100">
-                                        <i className="fa fa-trash mt-5" aria-hidden="true"
+                                        <i className="fa fa-trash fa-lg mt-5" aria-hidden="true"
                                             onClick={() => eliminarPizza(idx)}
                                         ></i>
                                     </div>
                                     <div className="m-1 w100">
+                                        
                                     </div>
                                 </div>
                             )
-                        }) : "Sin Elementos"
+                        }) : "No hay nada por aquí aun!!!"
                     }
                 </div>
                 <div className="col-md4">

@@ -50,7 +50,6 @@ export default function CartScreen() {
     }
 
     return (
-
         <div>
             <div className="row" justify-content center container>
                 <div className="col-md-5">

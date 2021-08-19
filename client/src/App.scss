@@ -10,6 +10,8 @@ h1{
 .btn{
   background-color: red !important;
   color: white !important;
+  font-size: 10px;
+  width: 7.3rem;
 }
 select{
   box-shadow: none !important;
@@ -64,4 +66,5 @@ select{
 .img-center{
   display: flex;
   align-content: center;
+  margin-left: 2rem;
 }

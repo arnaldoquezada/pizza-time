@@ -18,20 +18,13 @@ export default function Nab() {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        {/* <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Items:</Link>
-        </li>         */}
-        {/* <li className="nav-item">         
-          
-        </li>       */}
-      </ul>
-      {/* <Link className="fas fa-cart-arrow-down navbar-text" to="/cart"></Link> */}
+      <ul class="navbar-nav">       
+      </ul>      
     </div>
     <form className="d-flex">
       <Link className="fas fa-cart-arrow-down fa-2x fa-cart" to="/cart"></Link>
       <Link to="/cart" className="nav-link" aria-current="page">             
-            {cart.items.length}  - ${cart.total}
+           ({cart.items.length}) ${cart.total}
           </Link>
 
     </form>

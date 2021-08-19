@@ -31,10 +31,10 @@ export default function Pizza({ pizza }) {
     }
     return (
     <div>
-        <div style={{ margin: '70px' }} className="shadow-lg p-3 bg-body rounded">
+        <div style={{ margin: '70px',height:'420px', width:'300px'}} className="shadow-lg p-3 bg-body rounded">
             <div onClick={handleShow} className="flex-cont-ele">
                 <h1>{pizza.name}</h1>
-                <img src={pizza.image} alt="" className="img-fluid img-center" style={{ height: '200px !important', width: '200px' }} />
+                <img src={pizza.image} alt="" className="img-fluid img-center" style={{ height: '200px', width: '200px' }} />
             </div>
             <div className="flex-container">
                 <div className='m-1 w-100'>
@@ -62,7 +62,7 @@ export default function Pizza({ pizza }) {
                 <div className="m-1 w-100">
                     <button className="btn-danger btn"
                     onClick={() => agregarAllCarro()}>
-                        AGREGAR AL CARRO
+                        AGREGAR
                     </button>
                 </div>
             </div>
